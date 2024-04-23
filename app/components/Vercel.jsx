@@ -63,7 +63,7 @@ export default function Component() {
               </div>
               <h1 className="text-white mb-3 text-4xl sm:text-5xl lg:text-7xl lg:leading-normal font-extrabold">
                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-600">
-                  Hello, I'm
+                  Hello, I&apos;m
                 </span>
                 <br />
                 <div />
@@ -75,7 +75,7 @@ export default function Component() {
               </p>
               <div>
                 <Link
-                  className="inline-flex h-9 items-center justify-center rounded-md border border-gray-200 border-gray-200 bg-white px-4 text-sm font-medium shadow-sm transition-colors hover:bg-gray-100 hover:text-gray-900 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-gray-950 disabled:pointer-events-none disabled:opacity-50 dark:border-gray-800"
+                  className="inline-flex h-9 items-center justify-center rounded-md border border-gray-200  bg-white px-4 text-sm font-medium shadow-sm transition-colors hover:bg-gray-100 hover:text-gray-900 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-gray-950 disabled:pointer-events-none disabled:opacity-50 dark:border-gray-800"
                   href="#"
                 >
                   Contact Me
@@ -130,7 +130,7 @@ export default function Component() {
           <div className="container grid items-center gap-6 px-4 md:px-6 lg:grid-cols-2 lg:gap-10">
             <div className="space-y-2">
               <h2 className="text-3xl font-bold tracking-tighter md:text-4xl/tight">My Projects</h2>
-              <p className="text-gray-500 dark:text-gray-400">Here are some of the projects I've been working on.</p>
+              <p className="text-gray-500 dark:text-gray-400">Here are some of the projects I&apos;ve been working on.</p>
             </div>
             <div className="grid gap-6 sm:max-w-4xl sm:grid-cols-2 md:max-w-5xl md:grid-cols-3 lg:grid-cols-1 lg:gap-10">
               <Card>
@@ -189,7 +189,7 @@ export default function Component() {
             <div className="space-y-2">
               <h2 className="text-3xl font-bold tracking-tighter md:text-4xl/tight">My Skills</h2>
               <p className="max-w-[600px] text-gray-500 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed dark:text-gray-400">
-                I'm proficient in a variety of frontend technologies and tools.
+                I&apos;m proficient in a variety of frontend technologies and tools.
               </p>
             </div>
             <div className="grid gap-4 md:grid-cols-2">

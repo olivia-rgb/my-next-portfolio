@@ -67,7 +67,7 @@ function Skills({ content }) {
       <div className="text-center mb-8">
         <h1 className="text-4xl font-extrabold text-white mb-3">MY PROGRAMMING SKILLS</h1>
         <p className="max-w-[600px] text-gray-500 md:text-xl lg:text-base xl:text-xl dark:text-gray-400">
-          I'm proficient in a variety of frontend technologies and tools.
+          I am proficient in a variety of frontend technologies and tools.
         </p>
       </div>
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 p-3">

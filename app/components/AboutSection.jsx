@@ -32,7 +32,7 @@ const AboutSection = ({ content }) => {
         </div>
         <div>
           <h2 className='text-4xl font-bold text-white mb-4'>About Me</h2>
-          <p className='text-base lg:text-lg'>A Passionate Frontend Developer 🎨, who finds joy in crafting visually stunning responsive website.I have experience working with  JavaScript, React, Redux, Next.js,TypeScript, HTML, CSS, and Git.  I am a dedicated team player synergizing our strengths to create amazing applications.Together, let's build something truly extraordinary! 🚀🎨</p>
+          <p className='text-base lg:text-lg'>A Passionate Frontend Developer 🎨, who finds joy in crafting visually stunning responsive website.I have experience working with  JavaScript, React, Redux, Next.js,TypeScript, HTML, CSS, and Git.  I am a dedicated team player synergizing our strengths to create amazing applications.Together, let us build something truly extraordinary! 🚀🎨</p>
           <div className='flex flex-row mt-3'>
             <TabButton
               selectTab={() => handleTabChange("skills")}
