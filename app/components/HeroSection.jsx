@@ -40,8 +40,7 @@ const HeroSection = () => {
             />
           </h1>
           <p className="text-[#ADB7BE] text-base sm:text-lg mb-5 lg:text-xl">
-            I design beautifully responsive website😍.<br />I am in so much love
-            with what I do😘
+          Detailed-oriented Front End Developer with years of experience working with HTML, CSS, Javascript,<br/>TypeScript, Reactjs ,Nextjs and Git 
           </p>
           <div className="mb-5">
             <Link

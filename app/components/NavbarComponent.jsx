@@ -1,13 +1,11 @@
 "use client"
 import React, { useState } from "react";
-import { Navbar, NavbarBrand, NavbarContent, NavbarItem, NavbarMenuToggle, NavbarMenu, NavbarMenuItem, Button } from "@nextui-org/react";
+import { Navbar, NavbarBrand, NavbarContent, NavbarItem } from "@nextui-org/react";
 import { AcmeLogo } from "./AcmeLogo.jsx";
-import ThemeButton from "./ThemeButton.jsx";
 import AboutSection from "./AboutSection.jsx";
-import Skills from  "./Skills.jsx"
+import Skills from  "./Skills.jsx";
 import EmailSection from "./EmailSection.jsx";
 import ProjectsSection from "./ProjectsSection.jsx";
-
 
 export default function NavbarComponent() {
   const [activeLink, setActiveLink] = useState("Home");
@@ -22,6 +20,10 @@ export default function NavbarComponent() {
 
   const handleLinkClick = (label) => {
     setActiveLink(label);
+    const section = document.getElementById(label.toLowerCase());
+    if (section) {
+      section.scrollIntoView({ behavior: "smooth" });
+    }
   };
 
   return (
@@ -34,7 +36,7 @@ export default function NavbarComponent() {
           </NavbarBrand>
         </NavbarContent>
 
-        <NavbarContent className="hidden sm:flex gap-4" justify="center">
+        <NavbarContent justify="center">
           {menuItems.map((item, index) => (
             <NavbarItem key={item.label} isActive={activeLink === item.label}>
               <button
@@ -54,12 +56,7 @@ export default function NavbarComponent() {
           ))}
         </NavbarContent>
       </Navbar>
-      <div className="content">
-        {activeLink === "About" &&  <AboutSection content={null} />}
-        {activeLink === "Skills" &&  <Skills content={null} />}
-        {activeLink === "Projects" &&  <ProjectsSection content={null} />}
-        {activeLink === "Contact" &&  <EmailSection content={null} />}
-      </div>
+      
     </div>
   );
 }
