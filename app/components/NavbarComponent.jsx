@@ -2,6 +2,8 @@
 import React, { useState } from "react";
 import { Navbar, NavbarBrand, NavbarContent, NavbarItem } from "@nextui-org/react";
 import { AcmeLogo } from "./AcmeLogo.jsx";
+import { HiMenu } from "react-icons/hi"; // Import hamburger icon
+import { CgClose } from "react-icons/cg"; // Import close icon
 import AboutSection from "./AboutSection.jsx";
 import Skills from  "./Skills.jsx";
 import EmailSection from "./EmailSection.jsx";
@@ -9,6 +11,7 @@ import ProjectsSection from "./ProjectsSection.jsx";
 
 export default function NavbarComponent() {
   const [activeLink, setActiveLink] = useState("Home");
+  const [menuOpen, setMenuOpen] = useState(false); // State for menu visibility
 
   const menuItems = [
     { label: "Home", sectionId: "home" },
@@ -29,14 +32,22 @@ export default function NavbarComponent() {
   return (
     <div>
       <Navbar className="navbar max-w-full bg-[#121212] bg-opacity-100 text-white">
-        <NavbarContent>
+        <NavbarContent style={{ height: '70px', width: '100%' }}> {/* Increase height and width */}
           <NavbarBrand>
             <AcmeLogo />
             <p className="font-bold text-inherit">OLIVIA</p>
           </NavbarBrand>
         </NavbarContent>
 
-        <NavbarContent justify="center">
+        {/* Hamburger icon */}
+        <div className="sm:hidden">
+          <button onClick={() => setMenuOpen(!menuOpen)}>
+            {menuOpen ? <CgClose /> : <HiMenu />}
+          </button>
+        </div>
+
+        {/* Navbar content */}
+        <NavbarContent className={`hidden sm:flex gap-4 ${menuOpen ? 'flex flex-col' : 'hidden'}`} justify="center">
           {menuItems.map((item, index) => (
             <NavbarItem key={item.label} isActive={activeLink === item.label}>
               <button
@@ -56,7 +67,6 @@ export default function NavbarComponent() {
           ))}
         </NavbarContent>
       </Navbar>
-      
     </div>
   );
 }
